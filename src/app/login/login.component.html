@@ -1,0 +1,14 @@
+<h1>Login Form</h1>
+<div>
+    <input [(ngModel)]="login_email" type="text" placeholder = "Enter email">
+</div>
+<div>
+    <input [(ngModel)]="login_password" type="password" placeholder="Enter password">
+</div>
+<!-- {{login_email}} -->
+<div>
+    <input type="button" value="login"(click)="form_validation()">
+    </div>
+<h1>{{error}}</h1>
+<!-- <button (click)="postHTTPcall()">Post Http Call</button> -->
+

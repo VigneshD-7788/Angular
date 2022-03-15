@@ -1,1 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
+.header li{
+    display:inline-block;
+    margin-left:2% ;
+}
+li a{
+    text-decoration: none;
+    font-size: 3%;
+    font-size: 25px;
+}
+li a:hover{
+    cursor:pointer;
+    text-decoration: underline;
+}
+.active_home{
+    background-color: aqua;
+}
+span{
+    color:red;
+}
+.footer{
+    background-color: greenyellow;
+    padding: 2% 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.container{
+    background-color:rgb(160, 115, 115);
+    text-align: center;
+}
+.bg-color{
+    background-color: rgb(122, 155, 155);
+  /* height: 150px; */
+}
+.box{
+    border:2px solid black;
+    background-color: rgb(209, 119, 15);
+    height:300px;
+    width:15%;
+    
+}
+.leftbox{
+    float: left;
+}
+.rightbox{
+    float: right;
+}
+.box li{
+    list-style-type: none;
+    text-align: left;
+}
+.box li a{
+    color: #000;
+}
+.box-about li{
+    list-style-type: none;
+    text-align: left;
+}
+.box-about{
+    border:2px solid black;
+    background-color: rgb(201, 201, 34);
+    height:300px;
+    width:15%;
+    
+}
+.box-contact li{
+    list-style-type: none;
+    text-align: left;
+}
+.box-contact{
+    border:2px solid black;
+    background-color: rgb(85, 138, 163);
+    height:300px;
+    width:15%;
+    
+}
+.active-about{
+    background-color: green;
+}
+.active-contact{
+    background-color: rgb(60, 60, 189);
+}

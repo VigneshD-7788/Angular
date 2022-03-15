@@ -1,0 +1,50 @@
+<app-header></app-header>
+<div
+class="content">
+<h1>This is<span> Home </span> html content for chargebackgurus!</h1>
+</div>
+<div class="bg-color">{{employeeName}}</div>
+<div>
+<div class="box leftbox">
+<ul>
+    <li>
+        <a href="home"class="link">{{pageName}}</a>
+    </li>
+    <li>
+        <a href="about"class="link">About</a>
+    </li>
+    <li>
+        <a href="contact"class="link">Contact</a>
+
+    </li>
+</ul>
+</div>
+<div class="content">
+    <div>
+        <input [(ngModel)]="login_email" type="text" placeholder = "Enter email">
+    </div>
+    <div>
+        <input [(ngModel)]="login_password" type="password" placeholder="Enter password">
+    </div>
+    <!-- {{login_email}} -->
+    <div>
+        <input type="button" value="login"(click)="form_validation()">
+        </div>
+    <h1>{{error}}</h1>
+    <button (click)="getHTTPcall()">Get Http Call</button>
+    <button (click)="postHTTPcall()">Post Http Call</button>
+    <button (click)="postHTTPcallWithHeader()">Post Http Call with Header</button>
+    <button (click)="getHTTPcallWithHeader()">Get Students</button>
+</div>
+<div class="box rightbox">
+<ul>
+    <li>
+        <a href="home"class="link">Login</a>
+    </li>
+    <li>
+        <a href="about"class="link">Register</a>
+    </li>
+</ul>
+</div>
+</div>
+<app-footer></app-footer>
