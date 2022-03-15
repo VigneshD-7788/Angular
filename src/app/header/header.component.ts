@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
   constructor() {
 
     let token:any = sessionStorage.getItem("token");
-    console.log("token is"+":"+token);
+    // console.log("token is"+":"+token);
     if(token = ""|| token == undefined){
       this.showLogout = false;
     }else{

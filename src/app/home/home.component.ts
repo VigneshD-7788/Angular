@@ -9,6 +9,7 @@ import { CommonService } from '../common.service';
 })
 export class HomeComponent implements OnInit {
 
+  newRes:any;
   employeeName = "Employee name is Vignesh Devan!";//variable declaration
   pageName = "Your profile";
   login_email = "";//declare  the variable as empty
@@ -79,6 +80,7 @@ export class HomeComponent implements OnInit {
     );
     this.http.get("http://localhost:8080/getStudents",{headers:headers})
     .subscribe(res=>{
+      this.newRes = res;
       console.log(res);
     })
 
