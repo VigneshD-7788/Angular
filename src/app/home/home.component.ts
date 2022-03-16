@@ -10,8 +10,10 @@ import { CommonService } from '../common.service';
 export class HomeComponent implements OnInit {
 
   newRes:any;
+  emplist:any;
   employeeName = "Employee name is Vignesh Devan!";//variable declaration
   pageName = "Your profile";
+  pageCount = [0,1,2,3,4];
   login_email = "";//declare  the variable as empty
   login_password = "";//declare  the variable as empty
   error = "";
@@ -84,6 +86,30 @@ export class HomeComponent implements OnInit {
       console.log(res);
     })
 
+  }
+
+  employeeList(pageNo:any){
+    console.log(pageNo+"is page no")
+    pageNo =pageNo+1;
+    console.log(pageNo+"is page no")
+
+    this.http.get("http://localhost:8080/getPage?pageNo"+pageNo)
+    .subscribe((res:any)=>{
+      this.pageCount = Array.from(Array('pageCoount').keys()) // convert integer to pagination
+      this.emplist = res['data'];
+      console.log(res);
+    })
+  }
+
+  getPageCount(){
+    this.http.get("http://localhost:8080/getTotalCount")
+    .subscribe((res:any)=>{
+      console.log(res);
+      let totalpage =parseInt((parseInt(res['message'])/10).toFixed(0));//decimal to integer
+      console.log(totalpage)
+      this.pageCount = Array.from(Array(totalpage).keys()) //conversion of integer to array
+      console.log(this.pageCount)
+    })
   }
 
 }
