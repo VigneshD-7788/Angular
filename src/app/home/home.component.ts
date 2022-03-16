@@ -18,7 +18,10 @@ export class HomeComponent implements OnInit {
   login_password = "";//declare  the variable as empty
   error = "";
   //object can be created using constructor
-  constructor(private common:CommonService,private http:HttpClient) { }
+  constructor(private common:CommonService,private http:HttpClient) { 
+
+   this.getPageCount();
+  }
 
   ngOnInit(): void {
   }
