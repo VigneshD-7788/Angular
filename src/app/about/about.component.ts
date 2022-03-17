@@ -9,6 +9,11 @@ export class AboutComponent implements OnInit {
 
   cssClassName = "class1";
 
+  pageTitle = "about page";
+  currentDate = new Date();
+  price = 100;
+  num = 5;
+
   peopleList= [
     {name:"Vignesh" ,'age':23},
     {name:"Max" ,'age':24},

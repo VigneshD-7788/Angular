@@ -1,6 +1,7 @@
 <app-header name="Chargebackgurus"></app-header>
 <div
             class="content">
+            <h1>{{pageTitle | uppercase}}</h1>
             <h1>This is<span> About </span> html content for chargebackgurus!</h1>
         </div>
         <div class="bg-color">Hi Vignesh Devan</div>
@@ -35,8 +36,11 @@
         <button class="button3" (click)="changeCssColor('class3')">Green</button>
         
         <div *ngFor="let user of peopleList">
-            <span [ngClass]="{'child':user.age>24}">{{user.name}}----{{user.age}}</span>
+            <span [ngClass]="{'child':user.age>24}">{{user.name | uppercase}}----{{user.age}}</span>
         </div>
+        <h3>{{currentDate | date:'medium'}}</h3>
+        {{price | currency}}
+        <h3>{{num | square}}</h3>
 
         </div>
        
