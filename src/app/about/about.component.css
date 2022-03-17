@@ -1,0 +1,25 @@
+.class1{
+    color: red;
+}
+.class2{
+    color: blue;
+}
+.class3{
+    color: green;
+}
+.button1{
+    color:white;
+    background-color: red;
+}
+.button2{
+    color:white;
+    background-color: blue;
+}
+.button3{
+    color:white;
+    background-color: green;
+}
+.child{
+    background-color: aqua;
+    color: black;
+}
