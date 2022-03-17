@@ -49,9 +49,9 @@ class="content">
 <div *ngFor = "let obj of newRes ">
    <p>{{obj.name}}----------{{obj.email}}</p>
 </div>
-<button (click)="employeeList(0)">Employee info</button>
+<!-- <button (click)="employeeList(0)">Employee info</button> -->
 <div class="employee-list" *ngFor = "let emp of emplist">
-    <span>{{emp.name}}</span>----<span>{{emp.email}}</span>
+    <span>{{emp.employee_name}}</span>----<span>{{emp.employee_email}}</span>
 </div>
 <div>
     <button (click)="employeeList(page)" *ngFor = "let page of pageCount">{{page+1}}</button>

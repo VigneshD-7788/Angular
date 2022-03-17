@@ -96,16 +96,15 @@ export class HomeComponent implements OnInit {
     pageNo =pageNo+1;
     console.log(pageNo+"is page no")
 
-    this.http.get("http://localhost:8080/getPage?pageNo"+pageNo)
+    this.http.get("http://localhost:8080/getPage?pageNo="+pageNo)
     .subscribe((res:any)=>{
-      this.pageCount = Array.from(Array('pageCoount').keys()) // convert integer to pagination
-      this.emplist = res['data'];
+      this.emplist = res;
       console.log(res);
     })
   }
 
   getPageCount(){
-    this.http.get("http://localhost:8080/getTotalCount")
+    this.http.get("http://localhost:8080/getPageCount")
     .subscribe((res:any)=>{
       console.log(res);
       let totalpage =parseInt((parseInt(res['message'])/10).toFixed(0));//decimal to integer
