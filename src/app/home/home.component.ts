@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   emplist:any;
   employeeName = "Employee name is Vignesh Devan!";//variable declaration
   pageName = "Your profile";
-  pageCount = [0,1,2,3,4];
+  pageCount :any;
   login_email = "";//declare  the variable as empty
   login_password = "";//declare  the variable as empty
   error = "";
