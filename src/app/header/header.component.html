@@ -2,17 +2,21 @@
 <div class="header">
     <ul>
         <li>
-            <a href="home"class="active_home">Home</a>
+            <a [ngClass] ="{'active_home' :menuName=='home'}"href="home">Home</a>
         </li>
         <li>
-            <a href="about"class="active-about">About</a>
+            <a [ngClass] ="{'active-about' :menuName=='about'}"href="about">About</a>
         </li>
         <li>
-            <a href="contact"class="active-contact">Contact</a>
+            <a [ngClass] ="{'active-contact' :menuName=='contact'}"href="contact">Contact</a>
         </li>
         <li *ngIf = "showLogout">
             <a href="#"class="link">Logout</a>
         </li>
     </ul>
+    <div>
+        <input [(ngModel)]="message" type="text" placeholder="Enter Message">
+        <input type="button"(click)="pushToParent()"value="Click to send to parent">
+    </div>
 
 </div>

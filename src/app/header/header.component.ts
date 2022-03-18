@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,13 @@ export class HeaderComponent implements OnInit {
 
   showLogout = true;
   @Input() name:any; //get the data from the parent component
+  @Input() menuName:any; //will be received from parent component
+  @Output() toParent = new EventEmitter; //send the data to parent
+  message:any="";
+
+  pushToParent(){
+    this.toParent.emit(this.message); //data will be sent to parent
+  }
   constructor() {
 
     let token:any = sessionStorage.getItem("token");
